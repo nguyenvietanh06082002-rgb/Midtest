@@ -1,8 +1,6 @@
-import React from "react";
-
 function NewRelease({ animeList, onSelectAnime, selectedAnime }) {
   return (
-    <div className="new-release">
+    <section className="new-release">
       <h2>New Release</h2>
 
       <div className="anime-list">
@@ -14,15 +12,13 @@ function NewRelease({ animeList, onSelectAnime, selectedAnime }) {
             key={anime.id}
             onClick={() => onSelectAnime(anime)}
           >
-            <img src={anime.poster} alt={anime.title} />
-
+            <img src={anime.poster} alt={anime.movieName} />
             <p>{anime.episode}</p>
-
-            <h4>{anime.title}</h4>
+            <h4>{anime.movieName}</h4>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
